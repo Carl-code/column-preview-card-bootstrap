@@ -1,0 +1,82 @@
+@import "fonts";
+@import "colors";
+
+body {
+  height: 100vh;
+}
+
+.sedans {
+  background-color: $BrightOrange;
+  padding: 50px 30px;
+  border-radius: 10px 10px 0 0;
+}
+.suvs {
+  background-color: $DarkCyan;
+  padding: 50px 30px;
+}
+.luxury {
+  background-color: $VeryDarkCyan;
+  padding: 50px 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+article {
+  & > i {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  & > h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    color: $VeryLightGray;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  & > p {
+    font-family: "Lexend Deca", sans-serif;
+    color: $TransparentWhite;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  & > button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+  }
+}
+
+.sedans > button {
+  color: $BrightOrange;
+}
+.suvs > button {
+  color: $DarkCyan;
+}
+.luxury > button {
+  color: $VeryDarkCyan;
+}
+
+/* Breakpoints */
+
+@media screen and (min-width: 769px) {
+    .cards-container {
+      display: flex;
+      border-radius: 10px 10px;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sedans {
+      border-radius: 0;
+      /* padding: 50px 70px; */
+    }
+    .luxury {
+      border-radius: 0;
+      padding: 50px 30px;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+  }
